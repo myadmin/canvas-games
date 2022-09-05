@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas - 2048</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class='container'>
+        <div class='fluid'>
+            <h1>2048</h1>
+            <div class='edits'>
+                <div class='size-block'>
+                    <div class='set-size'>
+                        <p id='size-title'>Size: </p>
+                        <input id='size' type='number' value='4'>
+                    </div>
+                    <div class='btns'>
+                        <div class='btn start'>Start</div>
+                        <div class='btn reset'>Reset</div>
+                    </div>
+                </div>
+                <div class='scores'>
+                    <span id='score'>Score: 0</span>
+                    <span id='bestScore'>Best Score: 0</span>
+                </div>
+            </div>
+            <div id='canvas-block'>
+                <div class='start2'>&gt; Start &lt;</div>
+                <div class='lose'>Game Over!</div>
+                <canvas id='canvas' width='500' height='500'></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+</body>
+
+</html>

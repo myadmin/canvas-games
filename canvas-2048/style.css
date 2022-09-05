@@ -1,0 +1,163 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables CSS */
+:root{
+    --blue: 70,80,161;
+    --pink: 209, 99, 142;
+}
+
+/* Main CSS */
+
+body{
+    min-height: 100vh;
+    font-family: 'Viga', 'Arial', cursive;
+    background: rgba(var(--blue),1);
+    color: white;
+    user-select: none;
+}
+.container{
+    max-width: 1150px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.fluid{
+    display: flex;
+    max-width: 800px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#canvas{
+    background: rgba(var(--blue),1);
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 58px;
+    color: white;
+    margin-top: 30px;
+}
+.scores{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.edits{
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.set-size{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.size-block{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.btns, #bestScore{
+    margin-top: 15px;
+}
+.size-block input{
+    margin-left: 10px;
+    max-width: 50px;
+}
+#size{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    padding: 5px 8px 5px 5px;
+    width: 60px;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+.lose, .start2{
+    z-index: 999;
+    position: absolute;
+    margin-top: 15px;
+    font-size: 35px;
+    display: none;
+}
+.start2{
+    display: block;
+    min-width: 150px;
+    margin-top: 200px;
+    cursor: pointer;
+}
+#canvas-block{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.reset{
+    margin-left: 15px;
+}
